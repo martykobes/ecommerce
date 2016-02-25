@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :line_items
+  resources :carts
   devise_for :users
   get 'storefront/all_items'
 
@@ -9,6 +11,8 @@ Rails.application.routes.draw do
   get 'categorical' => 'storefront#items_by_category'
 
   get 'branding' => 'storefront#items_by_brand'
+
+  post 'order_complete' => 'carts#order_complete'
 
   resources :categories
   resources :products

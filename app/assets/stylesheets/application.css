@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
-.navbar-nav navbar-right{
-  margin-top: 15px
+.pull-right {
+  text-align: right;
+  float:right;
 }
